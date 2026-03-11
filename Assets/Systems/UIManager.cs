@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] bool debugEnabled = false;
     [SerializeField] private TMP_Text signMessageText;
     [SerializeField] private TMP_Text gnomeMessageText;
-
+   
     private string currentMessage = "";
     private Coroutine fadeCoroutine;
 
@@ -22,12 +22,14 @@ public class UIManager : MonoBehaviour
 
 
 
-    //[Header("Alpha message")]
+    [Header("Interact Prompt ")]
+    [SerializeField] private TMP_Text promptMessageText;
+    [SerializeField] private string prompt;
     //[SerializeField] private TMP_Text messageText;
 
     private void Start()
     {
-        currentMessage = "";
+       // currentMessage = "";
        
     }
 
@@ -49,11 +51,15 @@ public class UIManager : MonoBehaviour
 
     }
 
-   //// show prompt()
-   // {
-   //     //showprompt= prompt
-   // }
+    public void ShowPrompt()
+    {
+        promptMessageText.text = prompt;
+    }
 
+    public void HidePrompt()
+    {
+        promptMessageText.text = "";
+    }
 
 
 
