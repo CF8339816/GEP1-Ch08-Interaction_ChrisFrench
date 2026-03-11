@@ -36,9 +36,11 @@ public class PlayerInteractionController : MonoBehaviour
     {
         if (context.performed)
         {
-            if(targetInteractable != null)
+            if (debugEnabled) Debug.Log("attempting to Interact ");
+
+            if (targetInteractable != null)
             {
-                if (debugEnabled) Debug.Log("attempting to Interact " );
+               // if (debugEnabled) Debug.Log("attempting to Interact " );
 
                 targetInteractable.Interact();
             }
