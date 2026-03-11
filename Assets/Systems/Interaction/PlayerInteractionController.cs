@@ -27,6 +27,7 @@ public class PlayerInteractionController : MonoBehaviour
         {
             targetInteractable = null;
             debugCurrentInteractable = null;
+
         }
 
     }

@@ -1,5 +1,6 @@
 //using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InteractMessage : MonoBehaviour, IInteractable
 {
@@ -9,7 +10,7 @@ public class InteractMessage : MonoBehaviour, IInteractable
     [Header("message")]
     [SerializeField] private string message;
     [SerializeField] private UIManager uiManager;
-
+  
     private void Start()
      //    private void start()
     // private void Awake()
@@ -26,7 +27,7 @@ public class InteractMessage : MonoBehaviour, IInteractable
         //if (debugEnabled) Debug.Log("Interacted with " + gameObject.name);
         uiManager.DisplayMessage(message);
 
-
+       // uiManager.ClearMessage(message);
 
     }
 
@@ -42,8 +43,25 @@ public class InteractMessage : MonoBehaviour, IInteractable
 
     public void UnFocused()
     {
-
+       //uiManager.ClearMessage(message); 
+    
     }
+
+    //public void OnInteract(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //    {
+    //       // if (debugEnabled) Debug.Log("attempting to Interact ");
+
+    //        if (PlayertargetInteractable != null)
+    //        {
+    //            // if (debugEnabled) Debug.Log("attempting to Interact " );
+
+    //            targetInteractable.Interact();
+    //        }
+    //    }
+    //}
+
 
 
 
