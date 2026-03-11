@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteractionController : MonoBehaviour
 {
@@ -29,6 +30,21 @@ public class PlayerInteractionController : MonoBehaviour
         }
 
     }
+
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if(targetInteractable != null)
+            {
+                if (debugEnabled) Debug.Log("attempting to Interact " );
+
+                targetInteractable.Interact();
+            }
+        }       
+    }
+
 
 
 
