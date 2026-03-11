@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press space to interact
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8591,6 +8591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugEnabled: 1
+  uiManager: {fileID: 0}
   debugCurrentInteractable: {fileID: 0}
 --- !u!114 &991472033
 MonoBehaviour:
@@ -8641,7 +8642,7 @@ MonoBehaviour:
   messageDuration: 3
   fadeOutTime: 2
   promptMessageText: {fileID: 607246813}
-  prompt: 
+  prompt: Press Space bar to interact
 --- !u!4 &1220462169
 Transform:
   m_ObjectHideFlags: 0
@@ -9918,8 +9919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819ecd659a3b10049b5710971ee658e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signMessage: 
-  gnomeMessage: Arrrg you grbbed me turnups  Nows ya better run
+  message: 
   uiManager: {fileID: 1220462168}
 --- !u!58 &1576879438
 CircleCollider2D:
@@ -10829,8 +10829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819ecd659a3b10049b5710971ee658e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signMessage: Hands off my square glass turnups ya Scruff
-  gnomeMessage: 
+  message: 
   uiManager: {fileID: 1220462168}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     [Header("Interact Prompt ")]
     [SerializeField] private TMP_Text promptMessageText;
     [SerializeField] private string prompt;
-    //[SerializeField] private TMP_Text messageText;
+   
 
     private void Start()
     {
@@ -65,14 +65,7 @@ public class UIManager : MonoBehaviour
 
 
 
-    //public void ClearMessage(string message)
-    //{
-    //    currentMessage = "";
-    //    messageText.text = currentMessage;
-
-
-
-    //}
+    
 
 
 
