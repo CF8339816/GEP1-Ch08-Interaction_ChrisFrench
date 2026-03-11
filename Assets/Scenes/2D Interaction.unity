@@ -8363,7 +8363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugEnabled: 0
-  messageText: {fileID: 0}
+  messageText: {fileID: 2018283798}
 --- !u!4 &1220462169
 Transform:
   m_ObjectHideFlags: 0
@@ -9617,8 +9617,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10008,6 +10008,10 @@ PrefabInstance:
       value: OnInteract
       objectReference: {fileID: 0}
     - target: {fileID: 969068893399012304, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovementController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 969068893399012304, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerInteractionController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -10055,6 +10059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2761114769124297127, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
+      propertyPath: playerAnimController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4747124666380168750, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
       propertyPath: m_Name
       value: Player
@@ -10063,11 +10071,11 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2036108661799035372, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 519420032}
-    - targetCorrespondingSourceObject: {fileID: 2036108661799035372, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
-      insertIndex: 1
+      insertIndex: -1
       addedObject: {fileID: 679766699}
+    - targetCorrespondingSourceObject: {fileID: 2036108661799035372, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 519420032}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4747124666380168750, guid: 805304e89d0032b408a065fbb7c58d08, type: 3}
       insertIndex: 1
@@ -10124,7 +10132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819ecd659a3b10049b5710971ee658e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  message: Hands off  my square glass turnips ya skruff...
+  uiManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
