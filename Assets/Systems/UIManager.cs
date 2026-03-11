@@ -2,14 +2,29 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEditor.Search;
 
 public class UIManager : MonoBehaviour
 {
 
     [SerializeField] bool debugEnabled = false;
-    [SerializeField] private TMP_Text messageText;
+    [SerializeField] private TMP_Text signMessageText;
+    [SerializeField] private TMP_Text gnomeMessageText;
+
     private string currentMessage = "";
     private Coroutine fadeCoroutine;
+
+    [Header("Alpha message")]
+
+    [SerializeField] float messageDuration = 3f;
+
+    [SerializeField] float fadeOutTime = .5f;
+
+
+
+    //[Header("Alpha message")]
+    //[SerializeField] private TMP_Text messageText;
+
     private void Start()
     {
         currentMessage = "";
@@ -29,10 +44,20 @@ public class UIManager : MonoBehaviour
         }
 
 
-        fadeCoroutine = StartCoroutine(FadeOutInfoText(message));
+        fadeCoroutine = StartCoroutine(displayMessageAndFade(message));
 
 
     }
+
+   //// show prompt()
+   // {
+   //     //showprompt= prompt
+   // }
+
+
+
+
+
 
     //public void ClearMessage(string message)
     //{
@@ -45,14 +70,40 @@ public class UIManager : MonoBehaviour
 
 
 
-    private IEnumerator FadeOutInfoText(string message)
+    private IEnumerator displayMessageAndFade(string message)
     {
-        messageText.text = currentMessage;
+
+        signMessageText.text= message;
+        signMessageText.alpha = 1;
+
+        
+      
+        float elapsedTime= 0f;
+        Color OriginalColor = signMessageText.color;
+
+
+
+        while(elapsedTime < messageDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeOutTime);
+
+            signMessageText.alpha = alpha;
+           // messageText.color = new Color(OriginalColor.r, OriginalColor.g, OriginalColor.b, alpha);
+
+            yield return null;
+
+        }
+
+
+
+
+        signMessageText.text = currentMessage;
         //currentMessage = message;
 
         yield return  new WaitForSeconds(3f);
 
-        messageText.text = "This is your last warning overide ya Scruff";
+        signMessageText.text = "This is your last warning overide ya Scruff";
 
     }
 }

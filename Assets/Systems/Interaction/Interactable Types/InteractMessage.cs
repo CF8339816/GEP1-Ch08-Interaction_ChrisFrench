@@ -8,7 +8,8 @@ public class InteractMessage : MonoBehaviour, IInteractable
  //public bool debugEnabled = false;
     
     [Header("message")]
-    [SerializeField] private string message;
+    [SerializeField] private string signMessage;
+    [SerializeField] private string gnomeMessage;
     [SerializeField] private UIManager uiManager;
   
     private void Start()
@@ -25,7 +26,7 @@ public class InteractMessage : MonoBehaviour, IInteractable
     public void Interact()
     {
         //if (debugEnabled) Debug.Log("Interacted with " + gameObject.name);
-        uiManager.DisplayMessage(message);
+        uiManager.DisplayMessage(signMessage);
 
        // uiManager.ClearMessage(message);
 
@@ -43,24 +44,9 @@ public class InteractMessage : MonoBehaviour, IInteractable
 
     public void UnFocused()
     {
-       //uiManager.ClearMessage(message); 
+    
     
     }
-
-    //public void OnInteract(InputAction.CallbackContext context)
-    //{
-    //    if (context.performed)
-    //    {
-    //       // if (debugEnabled) Debug.Log("attempting to Interact ");
-
-    //        if (PlayertargetInteractable != null)
-    //        {
-    //            // if (debugEnabled) Debug.Log("attempting to Interact " );
-
-    //            targetInteractable.Interact();
-    //        }
-    //    }
-    //}
 
 
 
